@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   resources :groups do
     resources :posts
+    
+    member do
+      post :join
+      post :quit
+    end
   end
   root 'groups#index'
 
